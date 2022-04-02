@@ -7,8 +7,11 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@types/ws": "^8.5.3",
     "vue": "^3.2.24",
-    "vue-router": "^4.0.11"
+    "vue-router": "^4.0.11",
+    "vue-timer-hook": "^1.0.0",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@types/node": "^16.7.10",

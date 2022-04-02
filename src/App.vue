@@ -1,13 +1,16 @@
 <template>
-  <router-view></router-view>
+  <stopwatch :is-active="stopwatchIsActive">
+    <router-view />
+  </stopwatch>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script setup lang="ts">
+import Stopwatch from '@/components/Stopwatch.vue'
+import { useStore } from "vuex";
 
-export default defineComponent({
-  name: 'App'
-})
+const store = useStore()
+
+const stopwatchIsActive = store.state.stopwatchIsActive
 </script>
 
 <style>
