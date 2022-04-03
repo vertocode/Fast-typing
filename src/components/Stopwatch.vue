@@ -8,7 +8,7 @@
   <div>
     <slot></slot>
   </div>
-  <div id="restartTimer" v-if="props.isActive">
+  <div id="restartTimer" v-if="store.state.stopwatchIsActive">
     <button @click="restartTimer">Restart</button>
   </div>
 </template>
@@ -16,10 +16,9 @@
 
 <script setup lang="ts">
 import { useTimer } from 'vue-timer-hook'
+import { useStore } from "vuex";
 
-interface Props { isActive: boolean }
-
-const props = defineProps<Props>()
+const store = useStore()
 
 const time: any = new Date()
 time.setSeconds(time.getSeconds() + 60)

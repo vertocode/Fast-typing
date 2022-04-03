@@ -2,6 +2,11 @@ import { createStore } from 'vuex'
 
 export const store = createStore({
     state: {
-        stopwatchIsActive: true
+        stopwatchIsActive: false
+    },
+    mutations: {
+      changeStateOfStopwatchIsActive(state: any) {
+          state.stopwatchIsActive = !state.stopwatchIsActive
+      }
     }
 });

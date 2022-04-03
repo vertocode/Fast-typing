@@ -1,25 +1,24 @@
 <template>
-  <stopwatch :is-active="stopwatchIsActive">
-    <router-view />
-  </stopwatch>
+  <router-view />
 </template>
 
 <script setup lang="ts">
-import Stopwatch from '@/components/Stopwatch.vue'
-import { useStore } from "vuex";
 
-const store = useStore()
-
-const stopwatchIsActive = store.state.stopwatchIsActive
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss">
+html {
+  background-color: #191622;
+  #app {
+    height: 100%;
+    width: 100%;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    text-align: center;
+    margin-top: 60px;
+    p {
+      color: #32313d;
+      font-weight: bolder;
+    }
+  }
 }
 </style>
